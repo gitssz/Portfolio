@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -325,11 +324,6 @@ padding-bottom: 10px;
     align-items: center;
 }
 
-/* .avatar {
-position:relative;
-animation:floatImg 2.1s infinite alternate-reverse linear;
-} */
-
 @keyframes floatImg {
     from {
         top: -15px;
@@ -345,26 +339,40 @@ animation:floatImg 2.1s infinite alternate-reverse linear;
     color:white;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 2.2rem;
-
+    margin:100px;
 }
 
+#skills h1 img{
+    height: 70px;
+    width:70px;
+    padding-right:10px;
+}
 
-.tech-logo{
+.skills-logo{
     display: flex;    
-    height:20vh;
-    width:25vw;
-    background-color: rgb(0, 0, 40);
-    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    /* height:40vh;
+    width:50vw;
+    background-color: white;
+    border-radius: 7px ;
+    border:2px solid #b0a0ff;
+    box-shadow: 4px 4px 5px #5b3aff; */
+    
 }
 
-.tech-logo img{
-    padding:10px;
-    transform:scale(1.1);
+.skills-logo img{
+    padding:20px;
+height:100px;
+width:100px;    
 }
 
 
-
+.express-logo img{
+    width:200px;
+}
 
 
 
@@ -404,7 +412,7 @@ animation:floatImg 2.1s infinite alternate-reverse linear;
     margin: 10px;
     width: 20vw;
     border-radius: 15px;
-    box-shadow: 3px 5px 4px #2b11b151;
+    box-shadow: 4px 3px 10px #c2b6ff;
     font-family: sans-serif;
     font-size: 15px;
     border: 1px solid #ddd;
@@ -419,7 +427,7 @@ animation:floatImg 2.1s infinite alternate-reverse linear;
 .formMsg {
     height: 130px;
     resize: none;
-    box-shadow: 3px 6px 4px #cabffd51;
+    box-shadow: 3px 3px 10px #c2b5ff;
 }
 
 .contactForm button {
@@ -432,8 +440,7 @@ animation:floatImg 2.1s infinite alternate-reverse linear;
     border-radius: 20px;
     border: 1px solid #5b3aff;
     font-weight: bold;
-    /* box-shadow: 2px 3px 3px #b0a0ff; */
-    box-shadow: 3px 5px 4px #2b11b151;
+    box-shadow: 3px 3px 10px #c2b5ff;
 
 }
 
