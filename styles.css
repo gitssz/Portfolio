@@ -10,10 +10,18 @@
     list-style: none;
 }
 
+body{
+    background-color: rgb(0, 0, 40);
+    font-family: 'Poppins',sans-serif;
+}
 
 /*================= navbar=================  */
 .container {
     background-color: rgb(0, 0, 40);
+    /* background-image: url("assets/img/comp.svg");
+    background-size:50vw ;
+    background-repeat:no-repeat ;
+opacity: 0.2; */
 }
 
 nav {
@@ -41,7 +49,7 @@ nav h1 {
     font-weight: bolder;
     font-family: 'Poppins';
     padding: 30px;
-    font-size: 30px;
+    font-size: 2.2rem;
 }
 
 nav h1 span {
@@ -60,7 +68,8 @@ nav li a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
+    }
+
 
 nav a:hover {
     border-bottom: 3px solid #b0a0ff;
@@ -69,11 +78,26 @@ nav a:hover {
     font-weight: bold;
 }
 
+/* nav  li a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background: #b0a0ff;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition:0.5s;
+}
+
+nav  li a :hover::after{
+    width:100%;
+} */
+
 /* =================main=================== */
 .main {
     margin: 50px;
     color: white;
-    padding-bottom: 70px;
+    padding-bottom: 10px;
     display:flex;
     align-items: center;
     justify-content:center;
@@ -92,16 +116,48 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Poppins';
+    font-family: 'Poppins',sans-serif;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
     word-spacing: 3px;
 }
 
 .devInfo .hi{
-height: 45px;
-width:50px;
+    height: 45px;
+    width:50px;
+}
+
+.devInfo .animate-text{
+    font-family: serif;
+    text-align:center;
+    font-size:180%;
+    letter-spacing: 7px;
+    word-spacing: 35px;
+    color:#b0a0ff;
+    opacity: 0.5;
+    margin-bottom:30px;
+    border-right:2px solid rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow:hidden;
+    transform:translateY(-20%);
+    /* vertically aligns the container by moving it up by 20% of its own height. */
+}
+
+/* animation  */
+.animate{
+    animation:typewriter 5s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter{
+from{width:0;}
+to{width:14em;}
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color:transparent;}
 }
 
 /* circle  */
@@ -112,14 +168,14 @@ width:50px;
     width: 210px;
     overflow: hidden;
     margin:40px;
-    /* box-shadow: 2px 3px 5px white; */
 }
 
 .devImg img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
+   }
+
 
 .intro {
     font-size: 85px;
@@ -162,10 +218,20 @@ width:50px;
 /* =================about============== */
 #about {
     background-color: white;
-    /* display:grid; */
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 200px ;
+}
+
+.about-container{
+    display:flex;
+    justify-content: space-around;
+    border:1px solid grey;
+    background-color: #b0a0ff;
+    box-shadow:10px 10px 8px #694bfc;
+    border-radius: 50px;
+    padding:50px;
 }
 
 .aboutText {
@@ -173,22 +239,104 @@ width:50px;
 }
 
 .aboutText h3 {
-    font-size: 3rem;
+    font-size: 2.7rem;
     font-weight: bolder;
-    color: rgb(0, 0, 40);
+    color:#b0a0ff;  
+    font-family:    -serif;
+    padding-bottom:40px;
+}
+
+.about-me{
+    font-size: 1rem;
+    font-weight:500;
     font-family: sans-serif;
+    /* color: grey; */
+}
+
+.tab-title{
+    margin:20px 0;
+    display: flex;
+}
+
+.tab-link{
+    margin-right:50px;
+    margin-bottom:30px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    position:relative;
+}
+
+.tab-link::after{
+    content:'';
+    width:0;
+    height:3px;
+    background-color: #b0a0ff;
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    transition:0.5s;
+}
+.tab-link.active-link::after{
+    width:50%;
+}
+
+.about-edu{
+    height: 100px;
+    width:420px;
+    padding:10px;
+    margin:15px 0;
+    border-radius:10px;
+    background-color: rgb(0, 0, 40);
+    color:white;
+    box-shadow:3px 4px 4px grey;
+    position:relative;
 
 }
 
+.about-edu h5{
+    color:#b0a0ff;
+    font-size:1.1rem;   
+}
+.about-edu h5 span{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    font-weight: normal;
+    font-size: small;
+    color:white;
+    }
 
-.aboutImg {}
+.about-edu p{
+font-size: small;
+padding:10px;
+}
 
-/*================skills================*/
+.about-edu:hover{
+    transform:scale(1.04);
+    box-shadow: 4px 4px 3px grey;
+}
 
+/* avatar  */
+.aboutImg{
+display: flex;
+justify-content: center;
+align-items:center;         
+}
+/* .avatar {
+position:relative;
+animation:floatImg 2.1s infinite alternate-reverse linear;
+} */
 
-
-
-
+@keyframes floatImg{
+    from{
+        top:-15px;
+    }
+    to{
+        bottom:25px;
+    }
+}
 
 
 
